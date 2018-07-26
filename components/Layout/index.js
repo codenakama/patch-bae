@@ -11,6 +11,7 @@ import {
   Toolbar
 } from 'rebass';
 import styled, { css } from '../../node_modules/styled-components';
+import OutsideAlerter from '../OutsideAlerter';
 
 const Logo = styled.img`
   width: 64px;
@@ -20,6 +21,7 @@ const focused = props => {
   if (props.focused) {
     return css`
       height: 130px;
+      padding-bottom: 3rem;
     `;
   }
 };
@@ -60,21 +62,27 @@ class Layout extends React.Component {
             </NavLink>
           </Link>
           <NavLink ml="auto" fontWeight="normal">
-            <Relative>
-              <Absolute right={0} top={0}>
-                <FeedbackTextarea
-                  onFocus={() => this.setState({ feedbackOpen: true })}
-                  focused={this.state.feedbackOpen}
-                  rows={1}
-                  placeholder="Feedback"
-                />
-              </Absolute>
-              {this.state.feedbackOpen && (
-                <Absolute top={92} right={6}>
-                  <SendButton>Send</SendButton>
+            <OutsideAlerter
+              handleClickOutsideElement={() =>
+                this.setState({ feedbackOpen: false })
+              }
+            >
+              <Relative>
+                <Absolute right={0} top={0}>
+                  <FeedbackTextarea
+                    onFocus={() => this.setState({ feedbackOpen: true })}
+                    focused={this.state.feedbackOpen}
+                    rows={1}
+                    placeholder={this.state.feedbackOpen ? '' : 'Feedback'}
+                  />
                 </Absolute>
-              )}
-            </Relative>
+                {this.state.feedbackOpen && (
+                  <Absolute top={92} right={6}>
+                    <SendButton>Send</SendButton>
+                  </Absolute>
+                )}
+              </Relative>
+            </OutsideAlerter>
           </NavLink>
         </Toolbar>
         <Container maxWidth={1024} mt={3} pt={64}>
