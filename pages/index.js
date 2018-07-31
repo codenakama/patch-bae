@@ -25,9 +25,11 @@ const StyledHeading = styled(Heading)`
 const Index = props => {
   return (
     <div>
-      <Heading fontSize={6} mb={4} color="#18A1A6">
-        Synths
-      </Heading>
+      <Flex jsutify="center" mb={6}>
+        <Heading fontSize={6} color="#18A1A6">
+          The official list of patches for famous synths
+        </Heading>
+      </Flex>
 
       <Flex>
         <Box w={1 / 2} pr={3}>

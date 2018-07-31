@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { Container, NavLink, Provider, Toolbar } from 'rebass';
+import { BlockLink, Container, Flex, NavLink, Provider, Toolbar } from 'rebass';
 import styled from '../../node_modules/styled-components';
 import FeedbackArea from '../FeedbackArea';
 
@@ -23,6 +23,13 @@ const Layout = ({ children, ...props }) => {
       </Toolbar>
       <Container maxWidth={1024} mt={3} pt={64}>
         {children}
+        <footer>
+          <Flex justify="flex-end" mt={128} mb={6}>
+            <BlockLink href="https://itsricardo.com" target="_blank">
+              by Codenakama
+            </BlockLink>
+          </Flex>
+        </footer>
       </Container>
     </Provider>
   );
