@@ -1053,3 +1053,16 @@ export const bankH = [
   'Play Wheels DK',
   'Theme Pad   DK'
 ];
+
+const deepmindPatches = {
+  'Bank A': bankA,
+  'Bank B': bankB,
+  'Bank C': bankC,
+  'Bank D': bankD,
+  'Bank E': bankE,
+  'Bank F': bankF,
+  'Bank G': bankG,
+  'Bank H': bankH
+};
+
+export default deepmindPatches;
