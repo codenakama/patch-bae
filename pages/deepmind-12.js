@@ -1,5 +1,14 @@
 import React from 'react';
-import { Badge, Column, Flex, Heading, Input, Row, Subhead, Text } from 'rebass';
+import {
+  Badge,
+  Column,
+  Flex,
+  Heading,
+  Input,
+  Row,
+  Subhead,
+  Text
+} from 'rebass';
 import styled, { withTheme } from 'styled-components';
 import deepmindPatches from '../synths/deepmind12/banks';
 
@@ -31,7 +40,7 @@ class DeepMind12Page extends React.Component {
     const { searchFilter, selectedInstrument } = this.state;
     return (
       <div>
-        <Heading mb={3}>Deepmindg 12 Patch List</Heading>
+        <Heading mb={3}>Deepmind 12 Patch List</Heading>
         <Flex mb={3}>
           <Input
             placeholder="Search patch"
@@ -87,38 +96,6 @@ class DeepMind12Page extends React.Component {
               </Column>
             );
           })}
-          {/* <Column>
-            <Subhead mb={3}>Bank A</Subhead>
-            {bankA.map(item => <Text mb={1}>{item}</Text>)}
-          </Column>
-          <Column>
-            <Subhead mb={3}>Bank B</Subhead>
-            {bankB.map(item => <Text mb={1}>{item}</Text>)}
-          </Column>
-          <Column>
-            <Subhead mb={3}>Bank C</Subhead>
-            {bankC.map(item => <Text mb={1}>{item}</Text>)}
-          </Column>
-          <Column>
-            <Subhead mb={3}>Bank D</Subhead>
-            {bankD.map(item => <Text mb={1}>{item}</Text>)}
-          </Column>
-          <Column>
-            <Subhead mb={3}>Bank E</Subhead>
-            {bankE.map(item => <Text mb={1}>{item}</Text>)}
-          </Column>
-          <Column>
-            <Subhead mb={3}>Bank F</Subhead>
-            {bankF.map(item => <Text mb={1}>{item}</Text>)}
-          </Column>
-          <Column>
-            <Subhead mb={3}>Bank G</Subhead>
-            {bankG.map(item => <Text mb={1}>{item}</Text>)}
-          </Column>
-          <Column>
-            <Subhead mb={3}>Bank H</Subhead>
-            {bankH.map(item => <Text mb={1}>{item}</Text>)}
-          </Column> */}
         </Row>
       </div>
     );
