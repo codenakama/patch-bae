@@ -1,16 +1,7 @@
 import React from 'react';
-import {
-  Badge,
-  Column,
-  Flex,
-  Heading,
-  Input,
-  Row,
-  Subhead,
-  Text
-} from 'rebass';
+import { Badge, Column, Flex, Heading, Input, Row, Subhead, Text } from 'rebass';
 import styled, { withTheme } from 'styled-components';
-import deepmindPatches from './deepmind12/banks';
+import deepmindPatches from '../synths/deepmind12/banks';
 
 const instruments = ['bass', 'pad', 'electric piano', 'synth', 'piano'];
 const InstrumentFilter = styled(Badge)`
